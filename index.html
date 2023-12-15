@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+   
+    <link rel="stylesheet" href="css/maine.css" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+
+  </head>
+  <body>
+    <main class="reg_main">
+    
+      <div class="reg_content">
+        <div class="reg_content_form">
+          <h1 class="reg_content_title">Stay updated!</h1>
+          <p class="reg_content_description"> Join 60,000+ product managers receiving monthly <br> updates on:</p>
+      
+        <ul class="reg_content_list">
+          <li><div><img src="assets/images/icon-list.svg" alt="list icon"></div> <span>Product deiscovery and building what matters</span> </li>
+          <li> <div><img src="assets/images/icon-list.svg" alt="list icon"></div> <span>Measuring to ensure updated to success</span></li>
+          <li> <div><img src="assets/images/icon-list.svg" alt="list icon"></div> <span>And much more!</span></li>
+        </ul>
+        <form class="reg_form" id="regForm">
+          <div style="display: flex; justify-content: space-between;">
+            <label for="email">Email adress</label>
+            <span id="error_message"class="error_valid">Valid Email required</span>
+          </div>
+          
+          <input
+          type="email"  id="email" name="email" 
+            placeholder="email@company.com"
+          />
+          <button class="reg_form_button" type="submit">Subscribe to montly newsletter</button>
+        </form>
+        </div> 
+        <img
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt="sign up illustration"
+        />
+      </div>
+      </div>
+      
+    </main>
+    <script type="module" src="main.js"></script>   
+  </body>
+</html>

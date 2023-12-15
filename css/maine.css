@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  ---tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(234, 29%, 20%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  background-color: var(--dark-slate-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  margin: 0;
+}
+
+.reg_main {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 30px;
+  width: 1000px;
+
+  background-color: var(--white);
+}
+.reg_main_thank_you {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  border-radius: 25px;
+  padding: 35px;
+  min-width: 400px;
+
+  background-color: var(--white);
+}
+.reg_content {
+  display: flex;
+  justify-content: space-around;
+  gap: 90px;
+}
+.reg_content > img {
+  flex: 1;
+}
+.reg_content_form {
+  flex: 1;
+  padding-left: 30px;
+}
+.reg_content_thank_you {
+  display: flex;
+  justify-content: center;
+}
+.reg_content_thank_you > .reg_content_form {
+  width: 397px;
+}
+.reg_content_thank_you > .reg_content_form > .reg_content_description {
+  line-height: 1.4;
+}
+.email_in {
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+}
+.reg_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+}
+.reg_form label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.reg_form input[type="email"] {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--charcoal-grey);
+}
+.reg_form_button,
+.reg_form_button_thank_you {
+  font-weight: 700;
+  padding: 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border-width: 1px;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+}
+.reg_form_button:active,
+.reg_form_button_thank_you:active {
+  background: linear-gradient(
+    278deg,
+    rgba(255, 132, 74, 1) 15%,
+    rgba(255, 98, 87, 1) 87%
+  );
+  box-shadow: 0px 10px 15px 0px rgba(255, 98, 87, 0.813);
+  border: none;
+}
+
+.reg_form_button_thank_you {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.reg_content_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.reg_content_list li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.reg_content_list li:nth-last-child(1) {
+  padding-bottom: 20px;
+}
+.reg_content_list li span {
+  padding-left: 10px;
+}
+
+.reg_content_title,
+.reg_content_title_than_you {
+  font-family: "Roboto", sans-serif;
+  color: var(--dark-slate-grey);
+  font-weight: 700;
+  font-size: 55px;
+  text-align: left;
+}
+
+.error_valid {
+  display: none;
+  color: var(---tomato);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.invalid_input {
+  background-color: rgba(255, 0, 0, 0.139);
+  border: 1.3px solid red !important;
+}
+.invalid_input::placeholder {
+  color: var(---tomato);
+}
+.invalid_input:focus {
+  outline: none;
+  border: 2px solid red !important;
+}
+.reg_content_description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 720px) {
+  .reg_main {
+    border-radius: 0px;
+    width: 720px;
+    align-items: center;
+  }
+  .reg_main_thank_you {
+    border-radius: 0px;
+    width: 100vh;
+    height: 100vh;
+    align-items: center;
+  }
+  .reg_content {
+    flex-direction: column-reverse;
+  }
+  .reg_content_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .reg_content_list li:nth-child(1),
+  .reg_content_list li:nth-child(2) {
+    padding-bottom: 15px;
+  }
+  .reg_form {
+    min-width: 370px;
+  }
+  /* .reg_form input[type="email"] {
+  } */
+  .reg_form_button {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .reg_content_thank_you > .reg_content_form {
+    display: flex;
+    gap: 25rem;
+  }
+  .reg_content_title_than_you {
+    font-size: 45px;
+  }
+  .reg_form_button_thank_you {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    font-size: 16px;
+    font-weight: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+  }
+}
